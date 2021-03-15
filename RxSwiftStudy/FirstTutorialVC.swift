@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ViewController: UIViewController {
+class FirstTutorialVC: UIViewController {
     
     var shownCities = [String]()
     let allCities = ["New York", "London", "Oslo", "Warsaw", "Berlin", "Praga"]
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension FirstTutorialVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return shownCities.count
     }

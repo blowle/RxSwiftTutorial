@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YuS-0n-BW7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,31 +8,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First TutorialVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RxSwiftStudy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FirstTutorialVC" customModule="RxSwiftStudy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uxr-oU-n2c">
-                                <rect key="frame" x="0.0" y="44" width="414" height="76.5"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="88"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City SearchBar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hg3-c0-1qe">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="S0u-xZ-MAS"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="WcF-Vj-Rwf">
-                                        <rect key="frame" x="0.0" y="20.5" width="414" height="56"/>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="* is all cities." translatesAutoresizingMaskIntoConstraints="NO" id="WcF-Vj-Rwf">
+                                        <rect key="frame" x="0.0" y="32" width="414" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dua-06-Czu">
-                                <rect key="frame" x="0.0" y="120.5" width="414" height="741.5"/>
+                                <rect key="frame" x="0.0" y="176" width="414" height="686"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cityPrototypeCell" textLabel="LyU-65-mxT" style="IBUITableViewCellStyleDefault" id="SvS-Xx-5dC">
@@ -68,6 +71,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dua-06-Czu" secondAttribute="trailing" id="eQp-HO-dqc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Yo3-MJ-hnr"/>
                     <connections>
                         <outlet property="searchBar" destination="WcF-Vj-Rwf" id="2DR-Zq-v3I"/>
                         <outlet property="tableView" destination="Dua-06-Czu" id="Y07-mf-Csk"/>
@@ -75,7 +79,79 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141" y="124"/>
+            <point key="canvasLocation" x="1900.0000000000002" y="93.75"/>
+        </scene>
+        <!--Colorfull Ball-->
+        <scene sceneID="Acu-uD-3Th">
+            <objects>
+                <viewController id="cSx-QI-a9T" customClass="ColorfullBall" customModule="RxSwiftStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IqY-QC-Byk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TZx-Tc-OaE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="29t-NJ-4W4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8F9-Jh-f2f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912" y="814"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZGQ-NU-d14">
+            <objects>
+                <viewController id="YgI-DF-Pjb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PIh-Jm-ALo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5e-TH-ugQ">
+                                <rect key="frame" x="166.5" y="163" width="81" height="30"/>
+                                <state key="normal" title="RxTutorial_1"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Xko-nh-bvZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHv-HZ-vhP">
+                                <rect key="frame" x="115.5" y="253" width="183" height="30"/>
+                                <state key="normal" title="RxTutorial_2 - ColorfullBall"/>
+                                <connections>
+                                    <segue destination="cSx-QI-a9T" kind="show" id="a6Z-YS-nKn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2b0-SC-iew"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o5e-TH-ugQ" firstAttribute="top" secondItem="2b0-SC-iew" secondAttribute="top" constant="75" id="IZa-k5-vPf"/>
+                            <constraint firstItem="oHv-HZ-vhP" firstAttribute="top" secondItem="o5e-TH-ugQ" secondAttribute="bottom" constant="60" id="XcK-Fw-oCJ"/>
+                            <constraint firstItem="o5e-TH-ugQ" firstAttribute="centerX" secondItem="PIh-Jm-ALo" secondAttribute="centerX" id="bfd-Rf-AuE"/>
+                            <constraint firstItem="oHv-HZ-vhP" firstAttribute="centerX" secondItem="PIh-Jm-ALo" secondAttribute="centerX" id="yqf-NT-w3o"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3i5-M8-HdT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tyc-CM-F13" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="763.768115942029" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gR8-V8-1tV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YuS-0n-BW7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b7K-7w-uv3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YgI-DF-Pjb" kind="relationship" relationship="rootViewController" id="dCU-OE-YrD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F5U-Hp-e8f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146.37681159420291" y="93.75"/>
         </scene>
     </scenes>
     <resources>
